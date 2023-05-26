@@ -1,0 +1,7 @@
+Uso de una base de datos NoSQL: Se optó por utilizar una base de datos NoSQL, como MongoDB, debido a su flexibilidad y escalabilidad para manejar grandes volúmenes de datos no estructurados. Esto permite almacenar la configuración de restaurantes y platos en documentos JSON, sin necesidad de definir una estructura estricta de tablas y columnas.
+
+Modelo de datos y Mongoose: Se utilizó el ORM Mongoose para definir y trabajar con los modelos de datos de los restaurantes y platos. Mongoose proporciona una capa de abstracción para interactuar con MongoDB, facilitando la definición de esquemas, las consultas y las operaciones de base de datos.
+
+Implementación del controlador: Se creó un controlador llamado RecommendationController para manejar las solicitudes REST. El controlador contiene una ruta /recommendation que acepta solicitudes POST con las preferencias de comida del usuario. Dentro del controlador, se realiza la lógica de consulta a la base de datos y se genera la recomendación correspondiente.
+
+Pruebas unitarias con Jest: Se utilizaron pruebas unitarias con Jest para verificar el correcto funcionamiento del controlador RecommendationController. Se mockearon los modelos de base de datos utilizando getModelToken para simular las consultas y asegurarse de que la recomendación generada cumple con las expectativas.
